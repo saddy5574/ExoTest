@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+        android:key="skip_category"
+        android:title="SKIP CLIPS">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_skipping"
+            android:title="Enable Skipping"
+            android:summary="Enable or Disable Skipping Clips"/>
+
+        <MultiSelectListPreference
+            android:dependency="enable_skipping"
+            android:dialogTitle="Selects Clips Categories for Skipping"
+            android:key="skip_categories"
+            android:title="Categories of Clips"
+            android:summary="Press to Show List"
+            android:entries="@array/clips_categories"
+            android:entryValues="@array/clips_categories"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="justPlay_category"
+        android:title="JUST PLAY CLIPS">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_justPlay"
+            android:title="Enable Just Play"
+            android:summary="Enable or Disable Just Play Clips"/>
+
+        <MultiSelectListPreference
+            android:dependency="enable_justPlay"
+            android:dialogTitle="Selects Clips Categories for Just Play"
+            android:key="justPlay_categories"
+            android:title="Categories of Clips"
+            android:summary="Press to Show List"
+            android:entries="@array/clips_categories"
+            android:entryValues="@array/clips_categories"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="volume_category"
+        android:title="VOLUME">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_volume"
+            android:title="Enable VOLUME"
+            android:summary="Enable or Disable Volume Clips"/>
+
+        <ListPreference
+            android:key="volume_percentages"
+            android:title="Select Volume Percentage"
+            android:summary="Select percentage for volume"
+            android:dependency="enable_volume"
+            android:entryValues="@array/volume_percentage_values"
+            android:entries="@array/volume_percentage"
+            />
+
+        <MultiSelectListPreference
+            android:dependency="enable_volume"
+            android:dialogTitle="Selects Clips Categories for Volume Up or Down"
+            android:key="volume_categories"
+            android:title="Categories of Clips for Volume"
+            android:summary="Press to Show List"
+            android:entries="@array/clips_categories"
+            android:entryValues="@array/clips_categories"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="Mute_category"
+        android:title="MUTE">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_mute"
+            android:title="Enable Mute"
+            android:summary="Enable or Disable Mute Bad words"/>
+
+
+    </PreferenceCategory>
+
+
+
+
+</PreferenceScreen>

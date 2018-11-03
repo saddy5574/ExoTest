@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_button_size">48dp</dimen>
+    <dimen name="button_container">48dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+</resources>

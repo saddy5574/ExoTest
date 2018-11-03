@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Player.PlayerActivity">
+
+    <com.google.android.exoplayer2.ui.AspectRatioFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/exo_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fastforward_increment="30000"
+            app:rewind_increment="30000"
+            app:show_buffering="true"
+            app:use_controller="true">
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+    </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/skip_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_container"
+        android:background="#96000000"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="12">
+
+        <ImageButton
+            android:id="@+id/button_hide_label_bar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back_indigo_a400_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <Spinner
+            android:id="@+id/spinner_label"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_container"
+            android:layout_weight="4"
+            android:padding="10dp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView_start_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:text="Start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView_stop_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:text="Stop"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="#FFFFFF" />
+
+
+        <ImageButton
+            android:id="@+id/button_save"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/ic_save_indigo_a400_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mute_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_container"
+        android:background="#96000000"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/button_hide_mute_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back_indigo_a400_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:layout_gravity="center|center_horizontal"
+            android:id="@+id/textView_start_time_for_mute"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Start Time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_gravity="center|center_horizontal"
+            android:id="@+id/textView_stop_time_for_mute"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Stop Time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="#FFFFFF" />
+
+
+        <ImageButton
+            android:id="@+id/button_save_mute"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/ic_save_indigo_a400_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+    </LinearLayout>
+
+</RelativeLayout>
