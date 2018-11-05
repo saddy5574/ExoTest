@@ -18,4 +18,14 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         super.onBackPressed();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }
